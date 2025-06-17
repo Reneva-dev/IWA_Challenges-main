@@ -24,11 +24,11 @@ if (year === 2050) {
   count += 3;
 
   if (status === "parent") {
-    console.log(december, 'Christmas Day');
+    console.log(month, 'Christmas Day');
     count += 1;
   }
 
-  console.log(december, 'Day of Goodwill');
+  console.log(month, 'Day of Goodwill');
   count += 1;
 }
 
