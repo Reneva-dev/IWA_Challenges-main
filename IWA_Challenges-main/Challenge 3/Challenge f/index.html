@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Public Holidays 2050</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .output {
+      margin-top: 1rem;
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .output p {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Public Holidays in South Africa - 2050</h1>
+  <div class="output" id="output"></div>
+
+  <script>
+    const year = 2050;
+    const status = 'parent';
+    let count = 0;
+    const outputDiv = document.getElementById('output');
+
+    function log(message) {
+      const p = document.createElement('p');
+      p.textContent = message;
+      outputDiv.appendChild(p);
+    }
+
+    if (year === 2050) {
+      log("January: New Year’s Day");
+      log("March: Human Rights Day");
+
+      const april = 'April';
+      log(`${april}: Family Day`);
+      log(`${april}: Freedom Day`);
+      count += 4;
+
+      if (status === "student") {
+        log('June: Youth Day');
+        count += 1;
+      }
+
+      log('August: Women’s Day');
+      log('September: Heritage Day');
+
+      const december = 'December';
+      log(`${december}: Day of Reconciliation`);
+      count += 3;
+
+      if (status === "parent") {
+        log(`${december}: Christmas Day`);
+        count += 1;
+      }
+
+      log(`${december}: Day of Goodwill`);
+      count += 1;
+    }
+
+    // Final output
+    log(`Status: ${status}`);
+    log(`Year: ${year}`);
+    log(`Total Holidays: ${count}`);
+  </script>
+</body>
+</html>
