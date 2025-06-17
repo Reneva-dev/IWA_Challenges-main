@@ -1,14 +1,14 @@
 const year = 2050;
-const status = 'parent';
+const status = 'student';
 let count = 0;
 
 if (year === 2050) {
   console.log("January", 'New Year’s Day');
   console.log("March", 'Human Rights Day');
 
-  const april = 'April';
-  console.log(april, 'Family Day');
-  console.log(april, 'Freedom Day');
+  let month = 'April';
+  console.log(month, 'Family Day');
+  console.log(month, 'Freedom Day');
   count += 4;
 
   if (status === "student") {
@@ -19,8 +19,8 @@ if (year === 2050) {
   console.log('August', 'Women’s Day');
   console.log('September', 'Heritage Day');
 
-  const december = 'December';
-  console.log(december, 'Day of Reconciliation');
+  month = 'December';
+  console.log(month, 'Day of Reconciliation');
   count += 3;
 
   if (status === "parent") {
