@@ -1,6 +1,6 @@
-const FREE_WARNING = 'Free shipping only applies to single customer orders';
-const BANNED_WARNING = 'Unfortunately we do not ship to your country of residence';
-const NONE_SELECTED = 0;
+const FREE_WARNING = 'Free shipping only applies to single customer orders'
+const BANNED_WARNING = 'Unfortunately we do not ship to your country of residence'
+const NONE_SELECTED = 0
 
 let currency = null
 let shipping = null
@@ -8,11 +8,13 @@ let location = 'RSA'
 let customers = 1
 
 // Product costs
-const shoes = 300 * 1;
-const toys = 100 * 5;
-const shirts = 150 * NONE_SELECTED;
-const batteries = 35 * 2;
-const pens = 5 * NONE_SELECTED;
+const shoes = 300 * 1
+const toys = 100 * 5
+const shirts = 150 * NONE_SELECTED
+const batteries = 35 * 2
+const pens = 5 * NONE_SELECTED
+
+const total = shoes + batteries + pens + shirts + toys 
 
 if (location === 'RSA' ) {
     shipping = 400
@@ -22,6 +24,12 @@ if (location === 'RSA' ) {
   shipping = location === 'NAM' ? 600 : 800
 }
 
+
+
+//if (location === 'RSA' ) {
+//   shipping = 400
+//   currency = 'R'
+//} 
 //if (location ==='NAM') {
 //   shipping = 600
  //   currency = $
@@ -50,18 +58,13 @@ if (location === 'RSA') {
   currency = '$';
 }
 
-// Free shipping conditions
-if (
-  (location === 'RSA' && totalCost >= 1000 && customers === 1) ||
-  (location === 'NAM' && totalCost >= 60 && customers === 1)
-) {
-  shipping = 0;
-} else if (customers !== 1 && (location === 'RSA' || location === 'NAM') && totalCost >= 1000) {
-  console.log(FREE_WARNING);
-}
+const isFreeLocal = currency === 'R' && total >=1000
+const isFreeInt = currency === '$' && total >=60
+const isFree = isFreeLocal || is FreeInt
 
-// Final output
-if (location !== 'NK') {
-  const finalTotal = totalCost + shipping;
-  console.log('Price:', currency + finalTotal);
-}
+const IS_FREE_WARNING = isFree && customers!==1
+
+if (shipping = 0) && (customers !=== 1) {console.log(WARNING) }
+
+
+
