@@ -2,10 +2,23 @@ const FREE_WARNING = 'Free shipping only applies to single customer orders';
 const BANNED_WARNING = 'Unfortunately we do not ship to your country of residence';
 const NONE_SELECTED = 0;
 
-let customers = 1;
-const location = 'RSA'; // Try changing to 'NAM', 'NK', or other countries
-let currency = null;
-let shipping = 0;
+let currency = null
+let shipping = null
+let location = 'RSA'
+
+if (location === 'RSA' ) {
+    shipping = 400
+    currency = 'R'
+} 
+
+if (location ==='NAM') {
+    shipping = 600
+}
+
+else {
+  shipping = 800
+}
+
 
 // Product costs
 const shoes = 300 * 1;
